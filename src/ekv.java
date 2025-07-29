@@ -12,5 +12,6 @@ public class ekv {
         System.out.println(nissan);
         System.out.println(nissan2);
         System.out.println(isSame);
+
     }
 }
