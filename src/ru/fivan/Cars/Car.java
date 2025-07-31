@@ -1,3 +1,5 @@
+package ru.fivan.Cars;
+
 import java.util.Objects;
 
 public class Car {
@@ -55,7 +57,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "ru.fivan.Cars.Car{" +
                 "model='" + model + '\'' +
                 ", fuel=" + fuel +
                 '}';

@@ -1,5 +1,4 @@
-import ru.fivan.animals.Lion;
-import ru.fivan.animals.Panter;
+import ru.fivan.Cars.Car;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
