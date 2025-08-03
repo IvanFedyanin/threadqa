@@ -36,6 +36,22 @@ public class StreamsClassExsample {
         }
 
         System.out.println(sedans);
+
+        //тут сначала фильтр по нужному параметру, а далее у объектв черех мап получаем один параметр
+        List<String> only2Doors = cars.stream()
+                .filter(x -> x.getCountDoor() > 4)
+                .map(x ->x.getCarName())
+                .collect(Collectors.toList());
+
+        System.out.println(only2Doors);
+
+        CarWithEnum lastElement = cars.get(cars.size()-1);
+        System.out.println(lastElement.getCarName());
+
+        CarWithEnum lastCarStream = cars.stream().reduce((temp, next)->next).get();
+        System.out.println(lastCarStream.getCarName());
     }
+
+
 
 }
