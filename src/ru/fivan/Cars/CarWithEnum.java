@@ -45,4 +45,14 @@ public class CarWithEnum {
     public void setCountDoor(Integer countDoor) {
         this.countDoor = countDoor;
     }
+
+    @Override
+    public String toString() {
+        return "CarWithEnum{" +
+                "carName='" + carName + '\'' +
+                ", type=" + type +
+                ", color='" + color + '\'' +
+                ", countDoor=" + countDoor +
+                '}';
+    }
 }
