@@ -37,7 +37,7 @@ public class ListTest {
         List<String> names3 = getCarList();
         System.out.println(names3);
 
-
+    //Еще один метод фильтруем список по значению, перекладывая отфильтрованное в новый список
         List<Car> carName = getCarList2();
         List<Car> carWithFuel = new ArrayList<>();
 
