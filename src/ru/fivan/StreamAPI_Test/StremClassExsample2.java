@@ -6,14 +6,26 @@ import java.util.stream.Collectors;
 
 public class StremClassExsample2 {
     public static void main(String[] args) {
-        List<String> email = Arrays.asList("ivanov_87@mail.ru", "petrov_sergei@yandex.ru", "svetlana_kuznetsova@gmail.com", "kostya_morozov@bk.ru", "alexey.klimenko@inbox.ru", "irina_smirnova@yahoo.com", "nikolay.vasilev@rambler.ru", "maria_gromova@list.ru", "danil_sokolov@tut.by", "oleg_borisov@outlook.com", "ivanov_87@mail.ru", "kostya_morozov@bk.ru", "alexey.klimenko@inbox.ru");
+        List<String> email = Arrays.asList("ivanov_87@mail.ru", "petrov_sergei@mail.ru", "svetlana_kuznetsova@gmail.com", "kostya_morozov@bk.ru", "alexey.klimenko@inbox.ru", "irina_smirnova@yahoo.com", "nikolay.vasilev@rambler.ru", "maria_gromova@list.ru", "danil_sokolov@tut.by", "oleg_borisov@outlook.com", "ivanov_87@mail.ru", "kostya_morozov@bk.ru", "alexey.klimenko@inbox.ru");
         List<String> uniq = email.stream().distinct().collect(Collectors.toList());
         System.out.println(uniq.size());
         System.out.println(uniq);
         System.out.println(email.size());
 
-        List<String> gmails = uniq.stream().filter(x ->x.endsWith("mail.ru")).collect(Collectors.toList());
+        List<String> gmails = uniq.stream()
+                .filter(x ->x.endsWith("mail.ru"))
+                .collect(Collectors.toList());
         System.out.println(gmails);
+
+        boolean isAllEmailIs = email.stream().allMatch(x ->x.endsWith(".ru"));
+        boolean isAllEmailIs2 = email.stream().noneMatch(x ->x.contains("@2"));
+        boolean isAllEmailIs3 = email.stream().anyMatch(x ->x.contains("p"));
+
+        System.out.println(isAllEmailIs);
+        System.out.println(isAllEmailIs2);
+        System.out.println(isAllEmailIs3);
+
+
 
     }
 }
